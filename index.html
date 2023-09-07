@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@unocss/reset/tailwind.min.css"
+    />
+    <title>Backup File</title>
+  </head>
+  <body class="flex">
+    <div class="flex flex-col w-full gap-1 items-center">
+      <div class="w-full bg-blue-100 px-3 py-1">
+        <div class="flex max-w-xl m-auto justify-between">
+          <h1 class="font-bold text-xl">Backup To Google Drive</h1>
+          <div>
+            <button class="bg-blue-400 px-2 py-1 rounded-lg">Sign In</button>
+            <button class="bg-blue-400 px-2 py-1 rounded-lg">Sign Out</button>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col w-full">
+        <div class="min-w-xl mx-auto">
+          <textarea
+            placeholder="Enter text here"
+            rows="10"
+            class="border w-full"
+          ></textarea>
+        </div>
+        <button class="bg-blue-100 px-2 py-1 rounded-lg w-min mx-auto">
+          Backup
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
