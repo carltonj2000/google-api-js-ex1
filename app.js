@@ -7,16 +7,50 @@ var DISCOVERY_DOCS = [
 var SCOPES = "https://www.googleapis.com/auth/drive";
 var signinBtn = document.getElementById("signin");
 var signoutBtn = document.getElementById("signout");
+
+window.onload = handleClientLoad;
 function handleClientLoad() {
-  gapi.load("client:auth2", initClient);
+  gapi.load("client", initClient);
 }
 function initClient() {
   gapi.client
     .init({
       apiKey: auth.api_key,
-      clientid: auth.web.client_id,
+      client_id: auth.web.client_id,
       discoveryDocs: DISCOVERY_DOCS,
       scope: SCOPES,
     })
-    .then(function () {});
+    .then(
+      function () {
+        gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+        updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+        if (signinBtn) signinBtn.onclick = handleSignin;
+        else console.error("Signin Button Reference Null");
+        if (signoutBtn) signoutBtn.onclick = handleSignOut;
+        else console.error("SignOut Button Reference Null");
+      },
+      function (error) {
+        console.error(error);
+      }
+    );
+}
+
+/**
+ *
+ * @param {string} isSignedIn - Person is signed in
+ */
+function updateSigninStatus(isSignedIn) {
+  if (signinBtn) {
+    if (isSignedIn) {
+      signinBtn.style.display = "none";
+      signinBtn.style.display = "block";
+    } else {
+      signinBtn.style.display = "block";
+      signinBtn.style.display = "none";
+    }
+  } else console.error("Signin Button Reference Null Error 2");
+}
+
+function handleSignin() {
+  gapi.auth2.getAuthInstance().signIn();
 }

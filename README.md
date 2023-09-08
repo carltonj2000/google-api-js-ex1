@@ -1,5 +1,8 @@
 # Google Drive API Javascript Access Example
 
+Did not finish this tutorial because it is based on
+a google api that is now deprecated and will not work.
+
 Run via `pnpm dlx live-server`.
 
 ## Creation History
@@ -43,3 +46,8 @@ The code in this repository is based on the following videos.
 npm init -y
 npm i -D typecript
 ```
+
+{
+"error": "idpiframe_initialization_failed",
+"details": "You have created a new client application that uses libraries for user authentication or authorization that are deprecated. New clients must use the new libraries instead. See the [Migration Guide](https://developers.google.com/identity/gsi/web/guides/gis-migration) for more information."
+}
