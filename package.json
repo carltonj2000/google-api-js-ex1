@@ -1,0 +1,16 @@
+{
+  "name": "google-api-js-ex1",
+  "version": "1.0.0",
+  "description": "Run via `pnpm dlx live-server`.",
+  "main": "auth.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "googleapis": "^126.0.1",
+    "typescript": "^5.2.2"
+  }
+}

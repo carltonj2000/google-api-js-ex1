@@ -1,5 +1,7 @@
 # Google Drive API Javascript Access Example
 
+Run via `pnpm dlx live-server`.
+
 ## Creation History
 
 The code in this repository is based on the following videos.
@@ -34,3 +36,10 @@ The code in this repository is based on the following videos.
 ### Create And Serve HTML File
 
 - create `index.html` and server via `pnpm dlx live-server`
+
+### JSDOC And Typescript
+
+```bash
+npm init -y
+npm i -D typecript
+```

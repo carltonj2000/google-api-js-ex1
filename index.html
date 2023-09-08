@@ -12,12 +12,24 @@
   </head>
   <body class="flex">
     <div class="flex flex-col w-full gap-1 items-center">
-      <div class="w-full bg-blue-100 px-3 py-1">
+      <div class="w-full bg-blue-100 px-3 py-2">
         <div class="flex max-w-xl m-auto justify-between">
-          <h1 class="font-bold text-xl">Backup To Google Drive</h1>
+          <h1 class="font-bold text-xl text-gray-700">
+            Backup To Google Drive
+          </h1>
           <div>
-            <button class="bg-blue-400 px-2 py-1 rounded-lg">Sign In</button>
-            <button class="bg-blue-400 px-2 py-1 rounded-lg">Sign Out</button>
+            <button
+              class="bg-blue-400 text-blue-50 px-2 py-1 rounded-lg"
+              id="signin"
+            >
+              Sign In
+            </button>
+            <button
+              class="bg-blue-400 text-blue-50 px-2 py-1 rounded-lg"
+              id="signout"
+            >
+              Sign Out
+            </button>
           </div>
         </div>
       </div>
@@ -29,10 +41,15 @@
             class="border w-full"
           ></textarea>
         </div>
-        <button class="bg-blue-100 px-2 py-1 rounded-lg w-min mx-auto">
+        <button
+          class="bg-blue-400 text-blue-50 px-2 py-1 rounded-lg w-min mx-auto"
+        >
           Backup
         </button>
       </div>
     </div>
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
   </body>
 </html>
